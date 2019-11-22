@@ -4,6 +4,8 @@
 // ...resolve(newValue)...
 // ...observer.next(newValue)...
 
+// Good overview tutorial: https://www.academind.com/learn/javascript/callbacks-vs-promises-vs-rxjs-vs-async-awaits/
+
 // 0. PROBLEM
 // -----------------------
 console.log("Problem:");
