@@ -4,7 +4,10 @@
 // ...resolve(newValue)...
 // ...observer.next(newValue)...
 
-// Good overview tutorial: https://www.academind.com/learn/javascript/callbacks-vs-promises-vs-rxjs-vs-async-awaits/
+// Good overview tutorial: https://www.academind.com/learn/javascript/callbacks-vs-promises-vs-rxjs-vs-async-awaits
+
+
+//Danke
 
 // 0. PROBLEM
 // -----------------------
