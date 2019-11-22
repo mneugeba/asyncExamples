@@ -7,18 +7,19 @@
 // 0. PROBLEM
 // -----------------------
 console.log("Problem:");
-let a = 100;
 function myBlackBox() {
     setTimeout(() => {
-        a = 200;
+        a += 200;
     },1000)
 };
 
+let a = 100;
 myBlackBox();
 console.log("After function call:", a);
 console.log("-------");
 // -----------------------
 
+ 
 
 // 1. Callback
 // -----------------------
@@ -30,7 +31,6 @@ function myBlackBox2(cb) {
         cb();
     },1000)
 };
-
 myBlackBox2(() => {
     console.log("Callback:", a1);
 });
@@ -38,7 +38,7 @@ console.log("After function call:", a1);
 console.log("-------");
 // -----------------------
 
-    
+/*    
 // 2. Promise
 // -----------------------
 console.log("Promise:");
@@ -103,4 +103,4 @@ observable$.subscribe( () => {
 });
 console.log("After subscription:", a4);
 console.log("-------");
-
+*/
