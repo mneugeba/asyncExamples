@@ -1,0 +1,25 @@
+{
+  "name": "asyncexamples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mneugeba/asyncExamples.git"
+  },
+  "author": "Mathias Neugebauer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mneugeba/asyncExamples/issues"
+  },
+  "homepage": "https://github.com/mneugeba/asyncExamples#readme",
+  "dependencies": {
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}
