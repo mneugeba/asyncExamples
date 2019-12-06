@@ -8,7 +8,7 @@
 
 
 //Danke
-
+/*
 // 0. PROBLEM
 // -----------------------
 console.log("Problem:");
@@ -42,7 +42,7 @@ myBlackBox2(() => {
 console.log("After function call:", a1);
 console.log("-------");
 // -----------------------
-
+*/
 /*    
 // 2. Promise
 // -----------------------
@@ -109,3 +109,68 @@ observable$.subscribe( () => {
 console.log("After subscription:", a4);
 console.log("-------");
 */
+
+
+
+// Example to show:
+// - the basic meaning of "this"
+// - the changed meaning of "this" when used in a callback function
+// - clarification that there is a difference between where a function is defined (e.g. within myObject) and where it is executed (e.g. within the global window scope)
+// - bind(this)
+// - arrow functions: less code to write, automatic binding
+
+var p1 = 100;
+var name = "Bob";
+
+/*var onTimeout = function() {
+    console.log(this);
+    console.log("Nach 1 sec bin ich", this.name);
+}*/
+
+var myObject = {
+    // external code
+    val: 1,
+    name: "Heinz",
+    hello: function() {
+        console.log(this);
+        console.log("Ich bin", this.name);
+        /*setTimeout(function() {
+            console.log(this);
+            console.log("Nach 1 sec bin ich", this.name);
+            // console.log("Und ausserdem", window.name);
+        }.bind(this), 1000);*/
+        setTimeout(() => {
+            console.log(this);
+            console.log("Nach 1 sec bin ich", this.name);
+            // console.log("Und ausserdem", window.name);
+        }, 1000);
+    },
+    add1: function() {
+        // changing the interal val
+        this.val += 1;
+        // returning an new object with an completely different val
+        // this is misleading, meaningless and somewhat bad code
+        // a function should have exactly 1 purpose
+        // an add function should only add and not also return misleading objects
+        return {
+            val: 123
+        }
+    }
+    // -----
+}
+
+var blub = function(a,b,c) {
+    console.log(arguments);
+}
+
+
+
+
+console.log(name);
+myObject.hello();
+console.log(name);
+blub(1, "hallo");
+console.log(myObject.add1().val)
+
+// this is bad code!
+// console.log(myObject.add1(), myObject.add1(), myObject.add1(), myObject.val);
